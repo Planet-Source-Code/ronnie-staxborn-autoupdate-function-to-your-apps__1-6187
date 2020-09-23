@@ -1,0 +1,58 @@
+Fill in all information about your program, companynamn, date, version.
+When you fill in url's to your download program and the remversion.dat file
+meke sure you use the CORRECT SPELLING to the url's otherwise the 
+AutoUpdate-program will not work.
+
+In the "EXE file of update" you must fill in the name (inkl. .exe) of the 
+program that is the latest program you have uploaded to your server (homepage)
+e.g. updated.exe is the updated program of e.g AutoUpdate.exe program.
+
+In the "EXE file of program" field, make sure to enter the name of your current 
+program e.g. AutoUpdate.exe.
+
+In the field "URL of program to download" is the updated program URL. 
+e.g. http://www.itson.nu/update/updated.exe (is the latest version of 
+AutoUpdate.exe, but renamed to updated.exe)
+
+In the field "URL to RemVersion.dat" you must neter CORRECT URL and spelling 
+(on RemVersion.dat file) to the Remversion.dat file.
+e.g. http://www.itson.nu/update/RemVersion.dat
+This file is very important becourse this file contains the version number of
+your latest program. Without this file the update will not work.
+
+Create "CurVersion.dat": This file is needed for the Updateprogram will recognise
+the versionnumber of your current program. Shall be at the user's local
+computer.
+
+Create "RemVersion.dat": This file contains the versionnumber of the latest version.
+This file will be up at your server (homepage).
+
+When you make your program, add these codes for you to start the Updte function.
+
+********************************************
+
+Dim AutoUpdate
+Private Sub Command1_Click()
+AutoUpdate = Shell("c:\your-program-folder\AutoUpdate.exe", 1)
+ 
+End Sub
+
+********************************************
+Make sure to use the END fuction after execting his code if you want
+the Update program to work.
+
+The files you have to send among your program is:
+
+* AutoUpdate.exe
+* remoteversion.ini
+* CurVersion.dat
+* msinet.ocx (Microsoft Internet Transfer Control)
+
+Without these files the program will NOT work.
+
+If you have any questions please email me at:
+rompa@hem.passagen.se
+
+
+
+
